@@ -1,0 +1,27 @@
+Node *findMiddle(Node *head) {
+
+    // Write your code here
+
+    if(head->next==NULL)
+
+    return head;
+
+    Node* slow = head;//move only one step
+
+    Node* fast = head->next;//move two steps
+
+    while(fast->next!=NULL && fast->next->next!=NULL)
+
+    {
+
+        slow = slow->next;
+
+        fast = fast->next->next;
+
+    }
+
+    //whenever fast reaches to the end slow would be at one lesser than middle element
+
+    return slow->next;
+
+}
