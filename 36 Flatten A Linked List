@@ -1,0 +1,13 @@
+class Node:
+    def __init__(self, val=0, next=None, child=None):
+        self.data = val
+        self.next = next
+        self.child = child
+
+
+# Don't change the code above.
+
+
+def flattenLinkedList(head: Node) -> Node:
+    # Write your code here
+    pass
