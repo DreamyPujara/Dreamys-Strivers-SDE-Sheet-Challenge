@@ -1,0 +1,121 @@
+int countlen(Node* head){
+
+ 
+
+    int len = 0;
+
+ 
+
+        while(head != NULL){
+
+        ++len;
+
+        head = head->next;
+
+    }
+
+ 
+
+    return len;
+
+}
+
+ 
+
+int findIntersection(Node *firstHead, Node *secondHead)
+
+{
+
+    //Write your code here
+
+ 
+
+    int len1 = countlen(firstHead);
+
+    int len2 = countlen(secondHead);
+
+    
+
+    Node* smallLength = NULL;
+
+    Node* bigLength = NULL;
+
+ 
+
+    int diff = 0;
+
+ 
+
+    if(len1 > len2){
+
+       
+
+       bigLength = firstHead;
+
+       smallLength = secondHead;
+
+       diff= len1 - len2;
+
+        
+
+    }
+
+ 
+
+    else if(len2 > len1){
+
+ 
+
+        bigLength = secondHead;
+
+        smallLength = firstHead;
+
+        diff = len2 - len1; 
+
+    }
+
+ 
+
+    while(diff--){
+
+        bigLength = bigLength->next;
+
+ 
+
+    }
+
+ 
+
+    while(bigLength !=NULL && smallLength != NULL){
+
+ 
+
+        if(bigLength == smallLength){
+
+           return bigLength->data;
+
+        
+
+        }
+
+ 
+
+        bigLength = bigLength->next;
+
+        smallLength = smallLength->next;
+
+ 
+
+    }
+
+ 
+
+    return -1;
+
+ 
+
+    
+
+    
+
+}
