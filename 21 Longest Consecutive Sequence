@@ -1,0 +1,27 @@
+#include <bits/stdc++.h> 
+#include <bits/stdc++.h> 
+int lengthOfLongestConsecutiveSequence(vector<int> &arr, int n) {
+    // Write your code here.
+    set<int>st;
+    for(int num:arr)
+    {
+        st.insert(num);
+    }
+    int longetsstreak=0;
+    for(int num:arr)
+    {
+
+        if(!(st.count(num-1)))
+        {
+            int currnumber=num;
+            int currentstreak=1;
+            while(st.count(currnumber+1)){
+                currnumber+=1;
+                currentstreak+=1;
+            }
+            longetsstreak=max(longetsstreak,currentstreak);
+        }
+        
+    }
+    return longetsstreak;
+}
