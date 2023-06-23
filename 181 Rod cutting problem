@@ -1,0 +1,18 @@
+int solve(vector<int> &p,int i,int cap,vector<vector<int>>&dp){
+    if(cap==0) return 0;
+    if(i==0) return cap*p[0];
+    
+    if(dp[i][cap]!=-1) return dp[i][cap];
+    
+    int nt = 0 + solve(p,i-1,cap,dp);
+    
+    int t=INT_MIN;
+    if(i+1 <= cap) t = p[i] + solve(p,i,cap-(i+1),dp);
+    return dp[i][cap]=max(t,nt);
+}
+
+int cutRod(vector<int> &price, int n)
+{
+    vector<vector<int>>dp(price.size()+1,vector<int>(n+1,-1));
+	return solve(price,n-1,n,dp);
+}
