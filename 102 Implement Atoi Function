@@ -1,3 +1,4 @@
+implement ATOI FUnction
 #include <bits/stdc++.h> 
 using namespace std;
 int atoi(string str) {
