@@ -1,3 +1,4 @@
+//rabin carp
 vector<int> stringMatch(string &str, string &pat) {
     // Write your code here
     int sizeOfStr = str.size();
