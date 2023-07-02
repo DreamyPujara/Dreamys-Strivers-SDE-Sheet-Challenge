@@ -1,3 +1,5 @@
+// find pattern in string
+//one line code
 #include <bits/stdc++.h> 
 bool findPattern(string p, string s)
 {
