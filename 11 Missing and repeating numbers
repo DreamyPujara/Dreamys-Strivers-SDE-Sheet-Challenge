@@ -1,5 +1,5 @@
+// missing and repeating
 #include <bits/stdc++.h>
-
 pair<int,int> missingAndRepeating(vector<int> &arr, int n)
 {
 	// Write your code here 
@@ -18,5 +18,4 @@ pair<int,int> missingAndRepeating(vector<int> &arr, int n)
 		}
 	}
 	return ans;
-	
 }
