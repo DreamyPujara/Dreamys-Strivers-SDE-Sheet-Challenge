@@ -1,3 +1,4 @@
+//preorder traversal
 void  preOrderTraversal(TreeNode *root ,vector<int> * preOrderTraversall ){
     if(root == NULL) return ; 
     preOrderTraversall->push_back(root -> data);
